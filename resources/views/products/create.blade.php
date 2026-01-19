@@ -3,7 +3,7 @@
     <main class="container">
         <section class="row align-items-center">
             <article class="col-12 col-md-8">
-                <form method="POST" action="{{route('post_submit')}}">
+                <form method="POST" enctype="multipart/form-data" action="{{route('post_submit')}}">
                     @csrf
                     <div class="mb-3">
                         <label for="title" class="form-label">Nome canzone</label>
@@ -21,7 +21,11 @@
                         <label for="description" class="form-label">Lyrics</label>
                         <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
                     </div>
-                    
+                    <div class="mb-3">
+                        <label for="img" class="form-label">Immagine</label>
+                        <input type="file" class="form-control" id="img" aria-describedby="emailHelp" name="img">
+                    </div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </article>

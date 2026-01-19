@@ -39,7 +39,8 @@ public function product_submit(Request $request){
         'title'=>$request->title,
         'author'=>$request->author,
         'year'=>$request->year,
-        'description'=>$request->description
+        'description'=>$request->description,
+        'img'=>$request->file('img')->store('image', 'public')
     ]);
     return redirect(route('homepage'))->with('status', 'Canzone aggiunta!');
 }

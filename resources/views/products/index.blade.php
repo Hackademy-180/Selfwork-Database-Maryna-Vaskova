@@ -10,6 +10,7 @@
                         <p class="lead">{{$product->author}}</p>
                         <p class="lead">{{$product->year}}</p>
                         <p class="lead">{{$product->description}}</p>
+                        <img src="{{Storage::url($product->img)}}" alt="Image of the Song" class="img-fluid">
                     </div>
                 </div>
             </article> 
