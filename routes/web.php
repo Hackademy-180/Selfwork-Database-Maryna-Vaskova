@@ -8,3 +8,15 @@ Route::get('/products/index', [PublicController::class, 'products_index'])->name
 Route::get('/products/create', [PublicController::class, 'products_create'])->name('products_create');
 Route::post('/product/submit', [PublicController::class, 'product_submit'])->name('post_submit');
 
+
+
+Route::get('/products/{song}/edit', [PublicController::class, 'products_edit'])
+->name('products_edit');
+
+Route::put('/products/{song}', [PublicController::class, 'products_update'])
+->name('products_update');
+
+Route::delete('/products/{song}', [PublicController::class, 'products_delete'])
+->name('products_delete');
+
+
